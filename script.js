@@ -33,9 +33,9 @@ function loadQuestion() {
     currentQuestion + 1
   } 問`;
 
-  //if (currentQuestion === 1) {
-    //document.getElementById("divA").textContent = "This text is different!";
-  //}
+  if (currentQuestion === 1) {
+    document.getElementById("divA").textContent = "説明";
+  }
 
   const questionData = currentQuiz[currentQuestion];
 
