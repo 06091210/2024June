@@ -6,7 +6,7 @@ const quizData = [
       { text: "×" },
     ],
     correct: 0,
-    let number = 1;
+    document.getElementById("divA").textContent = "This text is different!";
   },
 ];
 
