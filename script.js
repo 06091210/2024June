@@ -19,9 +19,6 @@ document.getElementById("total-questions").textContent = totalQuestions;
 function initQuiz() {
   currentQuestion = 0; // 問題番号の初期化
   score = 0; // スコアの初期化
-  if (currentQuestion === 1) {
-    document.getElementById("divA").textContent = "This text is different!";
-  }
   loadQuestion();
 }
 
@@ -35,6 +32,10 @@ function loadQuestion() {
   document.getElementById("question-number").textContent = `第 ${
     currentQuestion + 1
   } 問`;
+
+  if (currentQuestion === 1) {
+    document.getElementById("divA").textContent = "This text is different!";
+  }
 
   const questionData = currentQuiz[currentQuestion];
 
