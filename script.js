@@ -4,8 +4,6 @@ const quizData = [
     choices: [
       { text: "⚪︎" },
       { text: "×" },
-      { text: "" },
-      { text: "" },
     ],
     correct: 0,
   },
