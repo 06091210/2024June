@@ -6,6 +6,7 @@ const quizData = [
       { text: "×" },
     ],
     correct: 0,
+    let number = 1;
   },
 ];
 
