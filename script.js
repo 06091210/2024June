@@ -7,6 +7,14 @@ const quizData = [
     ],
     correct: 0,
   },
+  {
+    question: "カエルがよく鳴くと雨が降る　⚪︎か×か？",
+    choices: [
+      { text: "⚪︎" },
+      { text: "×" },
+    ],
+    correct: 0,
+  },
 ];
 
 let currentQuiz = quizData; // 全問題をそのまま使用
@@ -34,7 +42,10 @@ function loadQuestion() {
   } 問`;
 
   if (currentQuestion === 0) {
-    document.getElementById("divA").textContent = "説明";
+    document.getElementById("解説").textContent = "実は，ツバメが低く飛んでいるときは，雨が近づいている証拠だと言われています．雨が近づくと水蒸気が増え，ツバメの餌となる虫たちも湿気で重たくなってしまいます．そうして体が重くなって低くしか飛べない虫たちを追いかけるために，ツバメも同じように低く飛ぶそうです．";
+  }
+  else if (currentQuestion === 1) {
+        document.getElementById("解説").textContent = "";
   }
 
   const questionData = currentQuiz[currentQuestion];
@@ -97,7 +108,7 @@ function showResult() {
   const percentage = (score / currentQuiz.length) * 100;
   document.getElementById("score").textContent = `正解数: ${score}/${
     currentQuiz.length
-  } (${percentage.toFixed(1)}%)`;
+  } (${percentage.toFixed(2)}%)`;
 }
 
 // もう一度遊ぶ
